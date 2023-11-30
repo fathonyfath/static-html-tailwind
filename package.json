@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run watch-server\" \"npm run watch-css\"",
+    "build": "tailwindcss -i ./src/input.css -o ./public/style.css --minify",
     "watch-server": "node ./live-server.js --watch=\"public\"",
     "build-css": "tailwindcss -i ./src/input.css -o ./public/style.css",
     "watch-css": "tailwindcss -i ./src/input.css -o ./public/style.css --watch",
